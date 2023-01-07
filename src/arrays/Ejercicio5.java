@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio5 {
@@ -9,7 +10,8 @@ public class Ejercicio5 {
 		double numReales[] = new double[10];
 		
 		// Variables para almacenar el máximo y el mínimo
-		double max, min;
+		double max = Double.MIN_VALUE;
+		double min = Double.MAX_VALUE;
 		
 		// Creo el Scanner para leer los números por teclado
 		Scanner sc = new Scanner(System.in);
@@ -17,23 +19,13 @@ public class Ejercicio5 {
 		// Le pido al usuario que escriba números reales
 		// y los almaceno en la tabla
 		for(int i=0; i<numReales.length; i++) {
+			System.out.println("Introduzca un número");
 			numReales[i] = sc.nextDouble();
 		}
-
-		max = numReales[0];
-		min = numReales[0];
 		
-		// Vuelvo a recorrer la tabla para averiguar cuál es
-		// el mínimo y cuál es el máximo
-		for(double valor : numReales) {
-			if(valor > max) {
-				max = valor;
-			}
-			if(valor < min) {
-				min = valor;
-			}
-		}
-		
+		Arrays.sort(numReales);
+		System.out.println("Máximo: " + numReales[numReales.length-1]);
+		System.out.println("Mínimo: " + numReales[0]);
 		//Cierro el Scanner
 		sc.close();
 	}
