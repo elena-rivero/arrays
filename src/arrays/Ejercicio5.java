@@ -22,10 +22,15 @@ public class Ejercicio5 {
 			System.out.println("Introduzca un número");
 			numReales[i] = sc.nextDouble();
 		}
-		
-		Arrays.sort(numReales);
-		System.out.println("Máximo: " + numReales[numReales.length-1]);
-		System.out.println("Mínimo: " + numReales[0]);
+
+		for(double valor: numReales) {
+			if(valor<min) {
+				min = valor;
+			}
+			if(valor>max) {
+				max = valor;
+			}
+		}
 		//Cierro el Scanner
 		sc.close();
 	}
