@@ -10,8 +10,8 @@ public class Ejercicio5 {
 		double numReales[] = new double[10];
 		
 		// Variables para almacenar el máximo y el mínimo
-		double max = Double.MIN_VALUE;
-		double min = Double.MAX_VALUE;
+		double maxValor = Double.MIN_VALUE;
+		double minValor = Double.MAX_VALUE;
 		
 		// Creo el Scanner para leer los números por teclado
 		Scanner sc = new Scanner(System.in);
@@ -24,11 +24,11 @@ public class Ejercicio5 {
 		}
 
 		for(double valor: numReales) {
-			if(valor<min) {
-				min = valor;
+			if(valor<minValor) {
+				minValor = valor;
 			}
-			if(valor>max) {
-				max = valor;
+			if(valor>maxValor) {
+				maxValor = valor;
 			}
 		}
 		//Cierro el Scanner

@@ -11,11 +11,11 @@ public class BusquedaSecuencial {
 		int tabla[] = {14, 10, 5, 30, 25};
 		
 		// Valor a buscar
-		int valor = 5;
+		int valor = 8;
 		
 		// Mientras no encontremos el valor y no hayamos llegado al final de la tabla
 		// incrementamos en 1 el índice de búsqueda
-		while(valor != tabla[indiceBusqueda] && indiceBusqueda<tabla.length) {
+		while(indiceBusqueda<tabla.length && valor != tabla[indiceBusqueda]) {
 			indiceBusqueda++;
 		}
 		

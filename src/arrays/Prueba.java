@@ -5,15 +5,16 @@ import java.util.Arrays;
 public class Prueba {
 
 	public static void main(String[] args) {
-		int edad[];
-		edad = new int[5];
-		Arrays.fill(edad, 18);
-		Arrays.fill(edad,  0, 4, 23);
-		System.out.println(Arrays.toString(edad));
+		int tabla[] = {3, 5, 8, 2, 10};
+		int nuevaTabla[] = new int[tabla.length+1];
 		
-		double datos[] = {1, 2, 3, 4};
-		String tabla = Arrays.toString(datos);
-		System.out.println(tabla);
+		int nuevoElemento = 13;
+		
+		System.arraycopy(tabla, 0, nuevaTabla, 1, tabla.length);
+		nuevaTabla[0] = nuevoElemento;
+		tabla = nuevaTabla;
+		System.out.println(Arrays.toString(tabla));
+		
 	}
 
 }
